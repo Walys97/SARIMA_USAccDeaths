@@ -39,4 +39,21 @@ $$(1-B)(1-B^{12})\,Y_t = (1 - 0.4303\,B)(1 - 0.5528\,B^{12})\,a_t$$
 
 ## 📁 Archivos
 
-| Archivo |
+| Archivo | Descripción |
+|---|---|
+| `Aplicacion_USAccDeaths_SARIMA.ipynb` | Notebook con todo el análisis (kernel de R) |
+| `app.R` | Aplicación Shiny interactiva |
+| `img/` | Imágenes del notebook |
+
+## ▶️ Cómo ejecutar la aplicación Shiny
+
+1. Instalar los paquetes (solo la primera vez):
+```r
+   install.packages(c("shiny", "bslib", "forecast", "ggplot2", "tseries"))
+```
+2. Abrir R en la carpeta del repositorio y ejecutar:
+```r
+   shiny::runApp("app.R")
+```
+
+**Pestañas de la app:** Serie · Últimas observaciones · Identificación · Modelo · Pronóstico (con descarga en CSV) · Validación.
